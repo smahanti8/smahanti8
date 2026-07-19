@@ -12,9 +12,9 @@ I come from a family of surgeons, and I've seen up close what it costs when the 
 
 Every repo ships with a `DECISIONS.md` — because architecture judgment is the job — and reports its own failures, because a pipeline that claims 100% is either being fed clean data or lying to you.
 
-🏥 **[surgical-fhir-pipeline](../surgical-fhir-pipeline)** — *shipped.* Maps synthetic robotic-surgery telemetry to FHIR R4B behind a conformant REST API, and refuses to hide what the crossing destroys: 80% of cases exchangeable, every lossy mapping logged, terminology bindings marked `PROVISIONAL` with a test that fails if anyone promotes them without doing the work. Interoperability as a governance problem, treated like one.
+🏥 **[surgical-fhir-pipeline](https://github.com/smahanti8/surgical-fhir-pipeline)** — *shipped.* Maps synthetic robotic-surgery telemetry to FHIR R4B behind a conformant REST API, and refuses to hide what the crossing destroys: 80% of cases exchangeable, every lossy mapping logged, terminology bindings marked `PROVISIONAL` with a test that fails if anyone promotes them without doing the work. Interoperability as a governance problem, treated like one.
 
-⚖️ **[prior-auth-agent](../prior-auth-agent)** — *building in the open.* An agent that drafts prior-authorization determinations under two hard rules: no citation → no claim (every criterion links to the exact policy passage *and* the exact patient-record element), and it is never allowed to deny — approvals can be automated; denials get humans. LangGraph state machine, hash-chained audit log, golden-set evals in CI, cost-per-determination published. Follow the commits; the `Known Limitations` section is load-bearing.
+⚖️ **[prior-auth-agent](https://github.com/smahanti8/prior-auth-agent)** — *in progress.* A LangGraph agent drafting prior-authorization determinations under one hard rule: denials always route to human review, approvals can be automated. Every clinical claim cites its exact FHIR source; no citation, no claim. Audit logging, CI evals, and cost tracking are the next milestones.
 
 🛡️ **regulated-ai-evals** — *next.* The trust layer extracted and generalized: requirement→prompt→test traceability, versioned golden sets, regression gates, auto-generated audit packets. What IEC 62304 taught me, expressed in pytest.
 
