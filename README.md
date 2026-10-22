@@ -18,6 +18,8 @@ Every repo keeps a decision record (`DECISIONS.md`, or ADRs under `docs/`) — b
 
 📡 **[fleet-anomaly-evals](https://github.com/smahanti8/fleet-anomaly-evals)** — *early.* An evaluation harness for anomaly detection on a simulated robot fleet, scored against labeled ground truth. Built so far: a seeded, physics-lite reference simulator, three fault injectors (motor thermal runaway, sensor drift, comms loss) and a fault ledger, with the key decision recorded as an ADR: ground truth is injection time, and when a fault became detectable is logged alongside it, so a detector's latency splits into signal-limited lag and algorithm lag. 65 tests. Not built yet: the bearing-wear injector (the wear curve is a deliberate open design decision), any detector, and the evaluation harness itself.
 
+🧬 **[clinical-coding-lora](https://github.com/smahanti8/clinical-coding-lora)** — *early.* A QLoRA fine-tuning demonstration for ICD-10-CM coding on synthetic notes, built so every claim can be checked: a label set copied from a CMS file with its hash recorded, a test split that withholds two of six phrasing families from training, CPU baselines with bootstrap intervals, and an invalid-output rate kept apart from wrong-but-valid codes. Training and evaluation scripts are tested against a stub; the Phi-3-mini results are not run yet and will not be estimated.
+
 🛡️ **regulated-ai-evals** — *next.* The trust layer extracted and generalized: requirement→prompt→test traceability, versioned golden sets, regression gates, auto-generated audit packets. What IEC 62304 taught me, expressed in pytest.
 
 **Stack:** Python · Anthropic API (Opus, with a Haiku tiering analysis) · LangGraph · ChromaDB · MCP · FastAPI · FHIR R4B · GitHub Actions. Synthetic data only, always.
