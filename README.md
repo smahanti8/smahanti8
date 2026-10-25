@@ -22,7 +22,7 @@ Every repo keeps a decision record (`DECISIONS.md`, or ADRs under `docs/`) — b
 
 🛡️ **regulated-ai-evals** — *next.* The trust layer extracted and generalized: requirement→prompt→test traceability, versioned golden sets, regression gates, auto-generated audit packets. What IEC 62304 taught me, expressed in pytest.
 
-**Stack:** Python · Anthropic API (Opus, with a Haiku tiering analysis) · LangGraph · ChromaDB · MCP · FastAPI · FHIR R4B · GitHub Actions. Synthetic data only, always.
+**Stack:** Python · Anthropic API (Opus, with a Haiku tiering analysis) · LangGraph · ChromaDB · MCP · FastAPI · FHIR R4B · GitHub Actions. No patient data in any repository. Clinical-style projects use synthetic data; other projects use public datasets, with the source and terms named in each README.
 
 ## The standing invitation
 
